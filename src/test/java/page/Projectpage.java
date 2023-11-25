@@ -167,13 +167,13 @@ public void datepick()
 {
 	driver.findElement(deals).click();
 	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	 driver.findElement(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/i")).click();
+	 driver.findElement(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/i")).click();//calender
 
 
 	while(true)
 	{
 		
-		WebElement month=driver.findElement(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/div/div/div/span[1]"));
+		WebElement month=driver.findElement(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/div/div/div/span[1]"));//month
 		String month1=month.getText();
 		if(month1.equals("October 2023"))
 		{
@@ -182,11 +182,11 @@ public void datepick()
 		}
 		else
 		{
-			driver.findElement(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/div/div/div/span[2]")).click();
+			driver.findElement(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/div/div/div/span[2]")).click();//arrow
 		}
 	}
 
-	List<WebElement> alldates = driver.findElements(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/div/div/table/tbody/tr/td"));
+	List<WebElement> alldates = driver.findElements(By.xpath("//*[@id=\"rs_searchbox_multi\"]/div/div[3]/div/div/div/table/tbody/tr/td"));//date
 	for(WebElement dateelement:alldates)
 	{
 		String date=dateelement.getText();
