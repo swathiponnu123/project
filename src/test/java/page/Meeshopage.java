@@ -43,7 +43,7 @@ public void scrolldown()
 }
 public void assertion()
 	{
-	String actual=driver.getCurrentUrl();
+	String actual=driver.getTitle();
 	System.out.println(actual);
 	String exp="meesho.com";
 	 Assert.assertEquals(actual,exp);
